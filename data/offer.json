@@ -1,78 +1,26 @@
 [
     {
-        "name_s": "zr", 
-        "vorname_s": "", 
-        "matrnr_s": ""
+        "voraussetzungen_s": "Voraussetzung1", 
+        "studID_s": "studentHA7SQ8", 
+        "companyID_s": "companyBT9KQY", 
+        "tutorID_s": "tutor3CV762", 
+        "firmenbetreuer_s": "Betreuer1", 
+        "offerID_s": "offer5TZEHZ", 
+        "bis_s": "2", 
+        "von_s": "1", 
+        "status_s": "aktuell", 
+        "beschreibung_s": "Beschreiebung1"
     }, 
     {
-        "voraussetzungen_s": "", 
-        "betreuerID_s": "", 
-        "firmaID_s": "", 
-        "beschreibung_s": ""
-    }, 
-    {
-        "name_s": "", 
-        "vorname_s": "", 
-        "matrnr_s": ""
-    }, 
-    {
-        "name_s": "", 
-        "vorname_s": "", 
-        "matrnr_s": ""
-    }, 
-    {
-        "name_s": "", 
-        "vorname_s": "", 
-        "matrnr_s": ""
-    }, 
-    {
-        "name_s": "", 
-        "vorname_s": "", 
-        "matrnr_s": ""
-    }, 
-    {
-        "name_s": "", 
-        "vorname_s": "", 
-        "matrnr_s": ""
-    }, 
-    {
-        "name_s": "", 
-        "vorname_s": "", 
-        "matrnr_s": ""
-    }, 
-    {
-        "name_s": "", 
-        "vorname_s": "", 
-        "matrnr_s": ""
-    }, 
-    {
-        "name_s": "", 
-        "vorname_s": "", 
-        "matrnr_s": ""
-    }, 
-    {
-        "name_s": "", 
-        "vorname_s": "", 
-        "matrnr_s": ""
-    }, 
-    {
-        "name_s": "", 
-        "vorname_s": "", 
-        "matrnr_s": ""
-    }, 
-    {
-        "name_s": "", 
-        "vorname_s": "", 
-        "matrnr_s": ""
-    }, 
-    {
-        "name_s": "", 
-        "vorname_s": "", 
-        "matrnr_s": ""
-    }, 
-    {
-        "name_s": "", 
-        "vorname_s": "", 
-        "matrnr_s": ""
+        "tutorID_s": "tutor3CV762", 
+        "voraussetzungen_s": "Test", 
+        "firmenbetreuer_s": "Tester", 
+        "offerID_s": "offerVNJPBZ", 
+        "companyID_s": "companyBT9KQY", 
+        "bis_s": "", 
+        "von_s": "", 
+        "studID_s": "", 
+        "status_s": "angebot", 
+        "beschreibung_s": "Test"
     }
 ]

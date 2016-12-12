@@ -1,77 +1,14 @@
 [
     {
-        "name_s": "zr", 
-        "vorname_s": "", 
-        "matrnr_s": ""
+        "name_s": "Student1", 
+        "vorname_s": "Vorname1", 
+        "matrnr_s": "111111", 
+        "studID_s": "studentHA7SQ8"
     }, 
     {
-        "name_s": "kj", 
-        "vorname_s": "", 
-        "matrnr_s": ""
-    }, 
-    {
-        "name_s": "", 
-        "vorname_s": "", 
-        "matrnr_s": ""
-    }, 
-    {
-        "name_s": "", 
-        "vorname_s": "", 
-        "matrnr_s": ""
-    }, 
-    {
-        "name_s": "", 
-        "vorname_s": "", 
-        "matrnr_s": ""
-    }, 
-    {
-        "name_s": "", 
-        "vorname_s": "", 
-        "matrnr_s": ""
-    }, 
-    {
-        "name_s": "", 
-        "vorname_s": "", 
-        "matrnr_s": ""
-    }, 
-    {
-        "name_s": "", 
-        "vorname_s": "", 
-        "matrnr_s": ""
-    }, 
-    {
-        "name_s": "", 
-        "vorname_s": "", 
-        "matrnr_s": ""
-    }, 
-    {
-        "name_s": "", 
-        "vorname_s": "", 
-        "matrnr_s": ""
-    }, 
-    {
-        "name_s": "", 
-        "vorname_s": "", 
-        "matrnr_s": ""
-    }, 
-    {
-        "name_s": "", 
-        "vorname_s": "", 
-        "matrnr_s": ""
-    }, 
-    {
-        "name_s": "", 
-        "vorname_s": "", 
-        "matrnr_s": ""
-    }, 
-    {
-        "name_s": "", 
-        "vorname_s": "", 
-        "matrnr_s": ""
-    }, 
-    {
-        "name_s": "", 
-        "vorname_s": "", 
-        "matrnr_s": ""
+        "name_s": "sdfsdf", 
+        "vorname_s": "dsfsdf", 
+        "matrnr_s": "231", 
+        "studID_s": "student651HWW"
     }
 ]

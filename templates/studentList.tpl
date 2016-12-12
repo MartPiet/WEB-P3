@@ -1,27 +1,27 @@
-## coding: utf-8
-<html>
-	<head> 
-		<title>Web-Teams</title> 
-		<meta charset="UTF-8" /> 
-		<style>
-			@import "/webteams.css"; 
-		</style>
-	</head>
-		<body> 
-            <table id="idList">
-                <tr><th>Name</th><th>Vorname</th><th>Matrikelnummer</th><th>Aktion</th></tr>
+<!-- Template -->
+<!-- Navigationsbereich -->
+@var loop_i;@
+@var tmp = context.length@
+@var entity = "student"@
 
-                ## man verwendet hier Zugriff auf das Dictionary "data_o"
-
-                %for element in data_o:
-                    <tr id="r${data_o.index(element)}"><td>${element['name_s']}</td><td>${element['vorname_s']}</td><td>${element['matrnr_s']}</td><td><a href="/edit/student/${data_o.index(element)}">bearbeiten</a>&nbsp;<a class="clDelete" href="/delete/student/${data_o.index(element)}">löschen</a></td></tr>
-                % endfor
-			</table>
-		<div>
-			<a href="/add/student">erfassen</a> <a href="../">Startseite</a>
-		</div>
-	</body>
-</html>
-
-
-
+<table>
+   <tr><th>Name</th><th>Vorname</th><th>Matrikelnummer</th></tr>
+    @for loop_i = 0; loop_i < context.length; loop_i++@
+    	@if context[loop_i]['name_s'] != ''@
+        	<tr>
+        		<td>#context[loop_i]['name_s']#</td>
+        		<td>#context[loop_i]['vorname_s']#</td>
+        		<td>#context[loop_i]['matrnr_s']#</td>
+        	</tr>
+        @endif@
+    @endfor@
+</table>	
+<div>
+	<a href="/add/#entity#">Erfassen</a> <!-- Noch ändern! -->
+    @if context.length > 0@
+        <button class="clEdit">Auswahl bearbeiten</button> 
+        <button class="clDelete">Löschen</button> 
+   	@endif@
+    <a href="/index.html">Startseite</a>
+</div>
+<!-- EOF -->

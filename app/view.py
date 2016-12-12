@@ -26,28 +26,26 @@ class View_cl(object):
 		self.lookup_o = TemplateLookup(directories=[self.path_s])	
 
 	#-------------------------------------------------------
-	def create_p(self, template_spl, data_opl, additionalData_opl):
+	def create_p(self, template_spl, data_opl, additionalData_opl = None):
 	#-------------------------------------------------------
 		# Auswertung mit templates
 		template_o = self.lookup_o.get_template(template_spl)
-		#if 'offer' in data_opl:
-		#	return template_o.render(data_o = data_opl, offer = data_opl)
-		#offer[int(firmaID_s)]
 		if additionalData_opl != None:
-			return template_o.render(data_o = data_opl, offer = additionalData_opl)
+			return template_o.render(data_o = data_opl, additionalData_o = additionalData_opl)
 		return template_o.render(data_o = data_opl)
 	
 	#-------------------------------------------------------
-	def createList_px(self, data_opl, entity, additionalData_opl): 
+	def createList_px(self, data_opl, entity, additionalData_opl = None): 
 	#-------------------------------------------------------
 		return self.create_p(entity + 'List.tpl', data_opl, additionalData_opl)
     
 	#-------------------------------------------------------
-	def createForm_p(self, template_spl, data_opl, id_spl, entity, additionalData_opl): 
+	def createForm_p(self, template_spl, data_opl, id_spl, entity, additionalData_opl = None): 
 	#-------------------------------------------------------	
 		template_o = self.lookup_o.get_template(template_spl)
-		if additionalData_opl != None:
-			return template_o.render(data_o = data_opl, offer = additionalData_opl, id_s=id_spl, listform_s = entity)	
+
+		if additionalData_opl != None:	
+			return template_o.render(data_o = data_opl, additionalData_o = additionalData_opl, id_s=id_spl, listform_s = entity)	
 		return template_o.render(data_o = data_opl, id_s=id_spl, listform_s = entity)
 	
 	#-------------------------------------------------------

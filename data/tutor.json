@@ -1,92 +1,9 @@
 [
     {
-        "titel_s": "Dr. Dr. Prof. Habil. Ing. M. Sc.", 
-        "name_s": "Simpson", 
-        "vorname_s": "Homer", 
-        "lehrgebiet_s": "Nukleartechnologie"
-    }, 
-    {
-        "titel_s": "", 
-        "vorname_s": "jh", 
-        "lehrgebiet_s": "", 
-        "name_s": ""
-    }, 
-    {
-        "titel_s": "", 
-        "vorname_s": "", 
-        "lehrgebiet_s": "", 
-        "name_s": ""
-    }, 
-    {
-        "titel_s": "", 
-        "vorname_s": "", 
-        "lehrgebiet_s": "", 
-        "name_s": ""
-    }, 
-    {
-        "titel_s": "", 
-        "vorname_s": "", 
-        "lehrgebiet_s": "", 
-        "name_s": ""
-    }, 
-    {
-        "titel_s": "", 
-        "vorname_s": "", 
-        "lehrgebiet_s": "", 
-        "name_s": ""
-    }, 
-    {
-        "titel_s": "", 
-        "vorname_s": "", 
-        "lehrgebiet_s": "", 
-        "name_s": ""
-    }, 
-    {
-        "titel_s": "", 
-        "vorname_s": "", 
-        "lehrgebiet_s": "", 
-        "name_s": ""
-    }, 
-    {
-        "titel_s": "", 
-        "vorname_s": "", 
-        "lehrgebiet_s": "", 
-        "name_s": ""
-    }, 
-    {
-        "titel_s": "", 
-        "vorname_s": "", 
-        "lehrgebiet_s": "", 
-        "name_s": ""
-    }, 
-    {
-        "titel_s": "", 
-        "vorname_s": "", 
-        "lehrgebiet_s": "", 
-        "name_s": ""
-    }, 
-    {
-        "titel_s": "", 
-        "vorname_s": "", 
-        "lehrgebiet_s": "", 
-        "name_s": ""
-    }, 
-    {
-        "titel_s": "", 
-        "vorname_s": "", 
-        "lehrgebiet_s": "", 
-        "name_s": ""
-    }, 
-    {
-        "titel_s": "", 
-        "vorname_s": "", 
-        "lehrgebiet_s": "", 
-        "name_s": ""
-    }, 
-    {
-        "titel_s": "", 
-        "vorname_s": "", 
-        "lehrgebiet_s": "", 
-        "name_s": ""
+        "tutorID_s": "tutor3CV762", 
+        "titel_s": "Dr.", 
+        "vorname_s": "Vorname1", 
+        "lehrgebiet_s": "Lehrgebiet1", 
+        "name_s": "Name1"
     }
 ]
