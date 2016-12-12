@@ -62,24 +62,6 @@ class Application_cl(object):
 
   @cherrypy.expose
   #-------------------------------------------------------
-  def evaluation(self, by = None): 
-  #-------------------------------------------------------
-    data_o = {}
-    data_o['company'] = self.db_o.read_px('company')
-    data_o['tutor'] = self.db_o.read_px('tutor')
-    data_o['student'] = self.db_o.read_px('student')
-    data_o['offer'] = self.db_o.read_px('offer')
-    
-    if by == None:
-      return self.view_o.createList_px(data_o, 'evaluation')
-    elif by == 'student':
-      return self.view_o.createList_px(data_o, 'evaluationByStudent')
-    elif by == 'supervisor':
-      return self.view_o.createList_px(data_o, 'evaluationBySupervisor')
-
-
-  @cherrypy.expose
-  #-------------------------------------------------------
   def add(self, entity): 
   #-------------------------------------------------------
     return self.createForm_p(entity)
@@ -122,6 +104,7 @@ class Application_cl(object):
         'anzMitarbeiter_s': data_opl['anzMitarbeiter_s']
       }
     elif entity == "offer":
+<<<<<<< HEAD
       data_a = self.db_o.read_px(entity, id)
       if 'von_s' in data_opl:
         data_a['von_s'] = data_opl['von_s']
@@ -136,7 +119,17 @@ class Application_cl(object):
           data_a['beschreibung_s'] = data_opl['beschreibung_s']
           data_a['voraussetzungen_s'] = data_opl['voraussetzungen_s']
           data_a['betreuerID_s'] = data_opl['betreuerID_s']
-          data_a['firmenbetreuer_s'] = data_opl['firmenbetreuer_s']                  
+          data_a['firmenbetreuer_s'] = data_opl['firmenbetreuer_s']       
+=======
+      print('save:')
+      print(data_opl)
+      data_a = {
+        'firmaID_s': data_opl['firmaID_s'],
+        'beschreibung_s': data_opl['beschreibung_s'],
+        'voraussetzungen_s': data_opl['voraussetzungen_s'],
+        'betreuerID_s': data_opl['betreuerID_s'],
+      }            
+>>>>>>> origin/master
 
     if id != 'None':
       # Update-Operation
@@ -146,7 +139,7 @@ class Application_cl(object):
       # Create-Operation
       id = self.db_o.create_px(data_a, entity) 
 
-    return self.createForm_p(entity, id)
+      return self.createForm_p(entity, id)
       
 
   
@@ -177,11 +170,13 @@ class Application_cl(object):
     if entity == 'offer':
       additionalData_o['company'] = self.db_o.read_px('company')
       additionalData_o['tutor'] = self.db_o.read_px('tutor')
+<<<<<<< HEAD
       data_o = self.db_o.read_px('offer')
     else:
       data_o = self.db_o.read_px(entity)
-
+=======
     data_o = self.db_o.read_px(entity)
+>>>>>>> origin/master
     # mit diesen Daten Markup erzeugen 
     return self.view_o.createList_px(data_o, entity, additionalData_o)  
     

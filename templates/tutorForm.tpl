@@ -14,15 +14,17 @@
 			<hr>
          		<a href="/list/student">Studenten</a> - <a href="/list/tutor">Lehrende</a> - <a href="/list/company">Firmenverzeichnis</a> - <a href="/list/offer">Angebote</a> - <a href="/evaluation">Auswertung</a>
         	<hr>
-		<form id="idWTForm" action="/save/student/${id_s}" method="POST">
+		<form id="idWTForm" action="/save/tutor/${id_s}" method="POST">
            	<input type="hidden" value="${id_s}" id="id_s" name="id_s" /> 
 			<div>
+				<label for="titel_s">Titel</label>
+				<input type="text" value="${data_o['titel_s']}" id="titel_s" name="titel_s" required/>
 				<label for="name_s">Name</label>
 				<input type="text" value="${data_o['name_s']}" id="name_s" name="name_s" required/>
 				<label for="vorname_s">Vorname</label>
 				<input type="text" value="${data_o['vorname_s']}" id="vorname_s" name="vorname_s" required/>
-				<label for="matrnr_s">Matrikelnummer</label>
-				<input type="text" value="${data_o['matrnr_s']}" id="matrnr_s" name="matrnr_s" required/>
+				<label for="lehrgebiet_s">Lehrgebiet</label>
+				<input type="text" value="${data_o['lehrgebiet_s']}" id="lehrgebiet_s" name="lehrgebiet_s" required/>
 			</div>
 			<div>
 				<input type="submit" value="Speichern"/>

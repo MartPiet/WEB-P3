@@ -26,31 +26,35 @@ class View_cl(object):
 		self.lookup_o = TemplateLookup(directories=[self.path_s])	
 
 	#-------------------------------------------------------
-	def create_p(self, template_spl, data_opl, additionalData_opl = None):
+	def create_p(self, template_spl, data_opl):
 	#-------------------------------------------------------
 		# Auswertung mit templates
 		template_o = self.lookup_o.get_template(template_spl)
-		if additionalData_opl != None:
-			return template_o.render(data_o = data_opl, offer = additionalData_opl)
-		return template_o.render(data_o = data_opl)
+		print("KEYS: ")
+		print(len(data_opl))
+		if 'offer' in data_opl:
+			return template_o.render(data_o = data_opl['list'], offer = data_opl['offer']['list'])
+		return template_o.render(data_o = data_opl['list'])
 	
 	#-------------------------------------------------------
-	def createList_px(self, data_opl, entity, additionalData_opl = None): 
+	def createList_px(self, data_opl, entity): 
 	#-------------------------------------------------------
-		return self.create_p(entity + 'List.tpl', data_opl, additionalData_opl)
+		return self.create_p(entity + 'List.tpl', data_opl)
     
 	#-------------------------------------------------------
-	def createForm_p(self, template_spl, data_opl, id_spl, entity, additionalData_opl = None): 
+	def createForm_p(self, template_spl, data_opl, id_spl, entity): 
 	#-------------------------------------------------------	
 		template_o = self.lookup_o.get_template(template_spl)
-
-		if additionalData_opl != None:	
-			return template_o.render(data_o = data_opl, offer = additionalData_opl, id_s=id_spl, listform_s = entity)	
+		print("KEYS2: ")
+		print(data_opl.keys())
+		print(len(data_opl))		
+		if 'offer' in data_opl:
+			return template_o.render(data_o = data_opl, offer = data_opl['offer']['list'], id_s=id_spl, listform_s = entity)	
 		return template_o.render(data_o = data_opl, id_s=id_spl, listform_s = entity)
 	
 	#-------------------------------------------------------
-	def createForm_px(self, id_spl, data_opl, entity, additionalData_opl): 
+	def createForm_px(self, id_spl, data_opl, entity): 
 	#-------------------------------------------------------
-		return self.createForm_p(entity + 'Form.tpl', data_opl, id_spl, entity, additionalData_opl)
+		return self.createForm_p(entity + 'Form.tpl', data_opl, id_spl, entity)
 
 # EOF

@@ -1,10 +1,107 @@
 [
     {
-        "sitz_s": "Sitz2", 
-        "companyID_s": "companyBT9KQY", 
-        "anzMitarbeiter_s": "22222", 
-        "taetigschw_s": "Schwerpunkt2", 
-        "firmenname_s": "Firmenname2", 
-        "branche_s": "Branche2"
+        "sitz_s": "Cupertino", 
+        "branche_s": "Computer", 
+        "anzMitarbeiter_s": "24459", 
+        "taetigschw_s": "Teuer verkaufen", 
+        "firmenname_s": "Apple"
+    }, 
+    {
+        "sitz_s": "", 
+        "branche_s": "", 
+        "anzMitarbeiter_s": "", 
+        "taetigschw_s": "", 
+        "firmenname_s": ""
+    }, 
+    {
+        "sitz_s": "", 
+        "branche_s": "", 
+        "anzMitarbeiter_s": "", 
+        "taetigschw_s": "", 
+        "firmenname_s": ""
+    }, 
+    {
+        "sitz_s": "", 
+        "branche_s": "", 
+        "anzMitarbeiter_s": "", 
+        "taetigschw_s": "", 
+        "firmenname_s": ""
+    }, 
+    {
+        "sitz_s": "", 
+        "branche_s": "", 
+        "anzMitarbeiter_s": "", 
+        "taetigschw_s": "", 
+        "firmenname_s": ""
+    }, 
+    {
+        "sitz_s": "", 
+        "branche_s": "", 
+        "anzMitarbeiter_s": "", 
+        "taetigschw_s": "", 
+        "firmenname_s": ""
+    }, 
+    {
+        "sitz_s": "", 
+        "branche_s": "", 
+        "anzMitarbeiter_s": "", 
+        "taetigschw_s": "", 
+        "firmenname_s": ""
+    }, 
+    {
+        "sitz_s": "", 
+        "branche_s": "", 
+        "anzMitarbeiter_s": "", 
+        "taetigschw_s": "", 
+        "firmenname_s": ""
+    }, 
+    {
+        "sitz_s": "", 
+        "branche_s": "", 
+        "anzMitarbeiter_s": "", 
+        "taetigschw_s": "", 
+        "firmenname_s": ""
+    }, 
+    {
+        "sitz_s": "", 
+        "branche_s": "", 
+        "anzMitarbeiter_s": "", 
+        "taetigschw_s": "", 
+        "firmenname_s": ""
+    }, 
+    {
+        "sitz_s": "", 
+        "branche_s": "", 
+        "anzMitarbeiter_s": "", 
+        "taetigschw_s": "", 
+        "firmenname_s": ""
+    }, 
+    {
+        "sitz_s": "", 
+        "branche_s": "", 
+        "anzMitarbeiter_s": "", 
+        "taetigschw_s": "", 
+        "firmenname_s": ""
+    }, 
+    {
+        "sitz_s": "", 
+        "branche_s": "", 
+        "anzMitarbeiter_s": "", 
+        "taetigschw_s": "", 
+        "firmenname_s": ""
+    }, 
+    {
+        "sitz_s": "", 
+        "branche_s": "", 
+        "anzMitarbeiter_s": "", 
+        "taetigschw_s": "", 
+        "firmenname_s": ""
+    }, 
+    {
+        "sitz_s": "", 
+        "branche_s": "", 
+        "anzMitarbeiter_s": "", 
+        "taetigschw_s": "", 
+        "firmenname_s": ""
     }
 ]

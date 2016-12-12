@@ -1,26 +1,167 @@
 [
     {
-        "voraussetzungen_s": "Voraussetzung1", 
-        "studID_s": "studentHA7SQ8", 
-        "companyID_s": "companyBT9KQY", 
-        "tutorID_s": "tutor3CV762", 
-        "firmenbetreuer_s": "Betreuer1", 
-        "offerID_s": "offer5TZEHZ", 
-        "bis_s": "2", 
-        "von_s": "1", 
+        "voraussetzungen_s": "Noch teurer verkaufen", 
+        "firmaID_s": "0", 
+        "betreuerID_s": "0", 
+        "firmenbetreuer_s": "Tim Cook", 
+        "bis_s": "11", 
+        "von_s": "10", 
+        "studentID_s": "0", 
         "status_s": "aktuell", 
-        "beschreibung_s": "Beschreiebung1"
+        "beschreibung_s": "Verkaufen"
     }, 
     {
-        "tutorID_s": "tutor3CV762", 
-        "voraussetzungen_s": "Test", 
-        "firmenbetreuer_s": "Tester", 
-        "offerID_s": "offerVNJPBZ", 
-        "companyID_s": "companyBT9KQY", 
+        "voraussetzungen_s": "", 
+        "firmaID_s": "0", 
+        "betreuerID_s": "0", 
+        "firmenbetreuer_s": "", 
         "bis_s": "", 
         "von_s": "", 
-        "studID_s": "", 
+        "studentID_s": "", 
         "status_s": "angebot", 
-        "beschreibung_s": "Test"
+        "beschreibung_s": ""
+    }, 
+    {
+        "voraussetzungen_s": "", 
+        "firmaID_s": "0", 
+        "betreuerID_s": "0", 
+        "firmenbetreuer_s": "", 
+        "bis_s": "", 
+        "von_s": "", 
+        "studentID_s": "", 
+        "status_s": "angebot", 
+        "beschreibung_s": ""
+    }, 
+    {
+        "voraussetzungen_s": "", 
+        "firmaID_s": "0", 
+        "betreuerID_s": "0", 
+        "firmenbetreuer_s": "", 
+        "bis_s": "", 
+        "von_s": "", 
+        "studentID_s": "", 
+        "status_s": "angebot", 
+        "beschreibung_s": ""
+    }, 
+    {
+        "voraussetzungen_s": "", 
+        "firmaID_s": "0", 
+        "betreuerID_s": "0", 
+        "firmenbetreuer_s": "", 
+        "bis_s": "", 
+        "von_s": "", 
+        "studentID_s": "", 
+        "status_s": "angebot", 
+        "beschreibung_s": ""
+    }, 
+    {
+        "voraussetzungen_s": "", 
+        "firmaID_s": "0", 
+        "betreuerID_s": "0", 
+        "firmenbetreuer_s": "", 
+        "bis_s": "", 
+        "von_s": "", 
+        "studentID_s": "", 
+        "status_s": "angebot", 
+        "beschreibung_s": ""
+    }, 
+    {
+        "voraussetzungen_s": "", 
+        "firmaID_s": "0", 
+        "betreuerID_s": "0", 
+        "firmenbetreuer_s": "", 
+        "bis_s": "", 
+        "von_s": "", 
+        "studentID_s": "", 
+        "status_s": "angebot", 
+        "beschreibung_s": ""
+    }, 
+    {
+        "voraussetzungen_s": "", 
+        "firmaID_s": "0", 
+        "betreuerID_s": "0", 
+        "firmenbetreuer_s": "", 
+        "bis_s": "", 
+        "von_s": "", 
+        "studentID_s": "", 
+        "status_s": "angebot", 
+        "beschreibung_s": ""
+    }, 
+    {
+        "voraussetzungen_s": "", 
+        "firmaID_s": "0", 
+        "betreuerID_s": "0", 
+        "firmenbetreuer_s": "", 
+        "bis_s": "", 
+        "von_s": "", 
+        "studentID_s": "", 
+        "status_s": "angebot", 
+        "beschreibung_s": ""
+    }, 
+    {
+        "voraussetzungen_s": "", 
+        "firmaID_s": "0", 
+        "betreuerID_s": "0", 
+        "firmenbetreuer_s": "", 
+        "bis_s": "", 
+        "von_s": "", 
+        "studentID_s": "", 
+        "status_s": "angebot", 
+        "beschreibung_s": ""
+    }, 
+    {
+        "voraussetzungen_s": "", 
+        "firmaID_s": "0", 
+        "betreuerID_s": "0", 
+        "firmenbetreuer_s": "", 
+        "bis_s": "", 
+        "von_s": "", 
+        "studentID_s": "", 
+        "status_s": "angebot", 
+        "beschreibung_s": ""
+    }, 
+    {
+        "voraussetzungen_s": "", 
+        "firmaID_s": "0", 
+        "betreuerID_s": "0", 
+        "firmenbetreuer_s": "", 
+        "bis_s": "", 
+        "von_s": "", 
+        "studentID_s": "", 
+        "status_s": "angebot", 
+        "beschreibung_s": ""
+    }, 
+    {
+        "voraussetzungen_s": "", 
+        "firmaID_s": "0", 
+        "betreuerID_s": "0", 
+        "firmenbetreuer_s": "", 
+        "bis_s": "", 
+        "von_s": "", 
+        "studentID_s": "", 
+        "status_s": "angebot", 
+        "beschreibung_s": ""
+    }, 
+    {
+        "voraussetzungen_s": "", 
+        "firmaID_s": "0", 
+        "betreuerID_s": "0", 
+        "firmenbetreuer_s": "", 
+        "bis_s": "", 
+        "von_s": "", 
+        "studentID_s": "", 
+        "status_s": "angebot", 
+        "beschreibung_s": ""
+    }, 
+    {
+        "voraussetzungen_s": "", 
+        "firmaID_s": "0", 
+        "betreuerID_s": "0", 
+        "firmenbetreuer_s": "", 
+        "bis_s": "", 
+        "von_s": "", 
+        "studentID_s": "", 
+        "status_s": "angebot", 
+        "beschreibung_s": ""
     }
 ]

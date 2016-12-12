@@ -35,71 +35,26 @@ class Application_cl(object):
    
   @cherrypy.expose
   #-------------------------------------------------------
-  def studentofferslist(self, entity = 'offers'):
-  #-------------------------------------------------------
-    additionalData_o = {}
-    if entity == 'offers':
-      additionalData_o['company'] = self.db_o.read_px('company')
-      additionalData_o['tutor'] = self.db_o.read_px('tutor')
-      data_o = self.db_o.read_px('offer')
-    return self.view_o.createList_px(data_o, entity, additionalData_o)  
-
-
-  @cherrypy.expose
-  #-------------------------------------------------------
-  def enroll(self, id, entity = 'offers'):
-  #-------------------------------------------------------
-    additionalData_o = {}
-    if entity == 'offers':
-      additionalData_o['company'] = self.db_o.read_px('company')
-      additionalData_o['tutor'] = self.db_o.read_px('tutor')
-      additionalData_o['student'] = self.db_o.read_px('student')
-      print(additionalData_o)
-    
-      data_o = self.db_o.read_px('offer', int(id))
-
-    return self.view_o.createForm_px(id, data_o, entity, additionalData_o) 
-
-  @cherrypy.expose
-  #-------------------------------------------------------
-  def evaluation(self, by = None): 
-  #-------------------------------------------------------
-    data_o = {}
-    data_o['company'] = self.db_o.read_px('company')
-    data_o['tutor'] = self.db_o.read_px('tutor')
-    data_o['student'] = self.db_o.read_px('student')
-    data_o['offer'] = self.db_o.read_px('offer')
-    
-    if by == None:
-      return self.view_o.createList_px(data_o, 'evaluation')
-    elif by == 'student':
-      return self.view_o.createList_px(data_o, 'evaluationByStudent')
-    elif by == 'supervisor':
-      return self.view_o.createList_px(data_o, 'evaluationBySupervisor')
-
-
-  @cherrypy.expose
-  #-------------------------------------------------------
   def add(self, entity): 
   #-------------------------------------------------------
     return self.createForm_p(entity)
 
   @cherrypy.expose
   #-------------------------------------------------------
-  def edit(self, entity, id): 
+  def edit(self, id, entity): 
   #-------------------------------------------------------
-    return self.createForm_p(entity, id)
+    return self.createForm_p(id, entity)
    
   @cherrypy.expose
   #-------------------------------------------------------
-  def save(self, entity, id = None, **data_opl): 
+  def save(self, entity, **data_opl): 
   #-------------------------------------------------------
     # Sichern der Daten: aufgrund der Formularbearbeitung muss
     # eine vollständige HTML-Seite zurückgeliefert werden!
     # data_opl: Dictionary mit den gelieferten key-value-Paaren
     # hier müsste man prüfen, ob die Daten korrekt vorliegen!
-    #id_s = data_opl[id]
-    self.db_o.read_px(entity)
+    id_s = data_opl['id_s']
+    
     if entity == "student":
       data_a = {
         'name_s': data_opl['name_s'],
@@ -122,33 +77,22 @@ class Application_cl(object):
         'anzMitarbeiter_s': data_opl['anzMitarbeiter_s']
       }
     elif entity == "offer":
-      data_a = self.db_o.read_px(entity, id)
-      if 'von_s' in data_opl:
-        data_a['von_s'] = data_opl['von_s']
-        data_a['bis_s'] = data_opl['bis_s']
-        data_a['studentID_s'] = data_opl['studentID_s']
-        if data_a['von_s'] != '':
-          data_a['status_s'] = 'aktuell'
-          self.db_o.update_px(id, data_a, 'offer') 
-        return self.enroll(id)
-      else:
-          data_a['firmaID_s'] = data_opl['firmaID_s']
-          data_a['beschreibung_s'] = data_opl['beschreibung_s']
-          data_a['voraussetzungen_s'] = data_opl['voraussetzungen_s']
-          data_a['betreuerID_s'] = data_opl['betreuerID_s']
-          data_a['firmenbetreuer_s'] = data_opl['firmenbetreuer_s']                  
+        data_a = {
+          'firmaID_s': data_opl['firmaID_s'],
+          'beschreibung_s': data_opl['beschreibung_s'],
+          'voraussetzungen_s': data_opl['voraussetzungen_s'],
+          'betreuer_s': data_opl['betreuer_s'],
+        }            
 
-    if id != 'None':
+    if id_s != 'None':
       # Update-Operation
-      self.db_o.update_px(id, data_a, entity) 
+      self.db_o.update_px(id_s, data_a, entity) 
       
     else:
       # Create-Operation
-      id = self.db_o.create_px(data_a, entity) 
+      id_s = self.db_o.create_px(data_a, entity) 
 
-    return self.createForm_p(entity, id)
-      
-
+    return self.createForm_p(entity, id_s)
   
   @cherrypy.expose
   #-------------------------------------------------------
@@ -173,32 +117,18 @@ class Application_cl(object):
   #-------------------------------------------------------
   def createList_p(self, entity): 
   #-------------------------------------------------------
-    additionalData_o = {}
-    if entity == 'offer':
-      additionalData_o['company'] = self.db_o.read_px('company')
-      additionalData_o['tutor'] = self.db_o.read_px('tutor')
-      data_o = self.db_o.read_px('offer')
-    else:
-      data_o = self.db_o.read_px(entity)
-
     data_o = self.db_o.read_px(entity)
     # mit diesen Daten Markup erzeugen 
-    return self.view_o.createList_px(data_o, entity, additionalData_o)  
+    return self.view_o.createList_px(data_o, entity)  
     
   #-------------------------------------------------------
   def createForm_p(self, entity, id_spl = None): 
   #-------------------------------------------------------
-    additionalData_o = {}
-    if entity == 'offer':
-      data_o = self.db_o.read_px('offer')
-      additionalData_o['company'] = self.db_o.read_px('company')
-      additionalData_o['tutor'] = self.db_o.read_px('tutor')
-
     if id_spl != None:
       data_o = self.db_o.read_px(entity, int(id_spl))
     else:
       data_o = self.db_o.getDefault_px(entity)
 
-    return self.view_o.createForm_px(id_spl, data_o, entity, additionalData_o) 
+    return self.view_o.createForm_px(id_spl, data_o, entity) 
 
 # EOF

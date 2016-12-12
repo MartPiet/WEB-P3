@@ -91,7 +91,22 @@ class Database_cl(object):
 		status_b = False
 		if int(id_spl) < len(self.data_o) and int(id_spl) >= 0:
 			if entity == 'company':
-				self.cascadeCompany(id_spl)
+				self.read_px('offer')
+				for element in self.data_o:
+<<<<<<< HEAD
+					if 'firmaID_s' in element:
+						if element['firmaID_s'] == id_spl:
+=======
+					print('Element:')
+					print(element)
+					if 'firmaID_s' in element:
+						if element['firmaID_s'] == id_spl:
+							print('true')
+							#self.data_o[int(id_spl)] = self.getDefault_px('offer')
+>>>>>>> origin/master
+							element = self.getDefault_px('offer')
+				self.saveData_p('offer')
+				self.read_px(entity)
 			self.data_o[int(id_spl)] = self.getDefault_px(entity)
 			self.saveData_p(entity)
 			status_b = True
@@ -99,26 +114,17 @@ class Database_cl(object):
 		return status_b
 
 	#-------------------------------------------------------
-	def cascadeCompany(self, id_spl):
-	#-------------------------------------------------------
-		self.read_px('offer')
-		for element in self.data_o:
-			if 'firmaID_s' in element:
-				if element['firmaID_s'] == id_spl:
-					print('true')
-					#self.data_o[int(id_spl)] = self.getDefault_px('offer')
-					element = self.getDefault_px('offer')
-		self.saveData_p('offer')
-		self.read_px('company')
-
-	#-------------------------------------------------------
 	def getDefault_px(self, entity): 
 	#-------------------------------------------------------
 		entities = {'student' : self.defaultStudentEntry,
 			   		'tutor' : self.defaultTutorEntry,
 			  		'company' : self.defaultCompanyEntry,
+<<<<<<< HEAD
 		           	'offer': self.defaultOfferEntry,
 		           	'offers': self.defaultOfferEntry
+=======
+		           	'offer': self.defaultOfferEntry
+>>>>>>> origin/master
 					}	
 		
 		return entities[entity]() 
@@ -133,7 +139,7 @@ class Database_cl(object):
 			file.close()
 		except:
 			# Datei neu anlegen 
-			print(str(entity) + ' neu anlegen.')
+			print('Datei neu anlegen.')
 			self.data_o = {}
 			entityList = []
 			for loop_i in range(0,15):
@@ -142,6 +148,7 @@ class Database_cl(object):
 			self.saveData_p(entity) 
 				
 		else:
+			print("ELSE")
 			self.data_o = fp_o
 		return
 

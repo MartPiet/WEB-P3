@@ -30,6 +30,16 @@ class View_cl(object):
 	#-------------------------------------------------------
 		# Auswertung mit templates
 		template_o = self.lookup_o.get_template(template_spl)
+<<<<<<< HEAD
+=======
+		#if 'offer' in data_opl:
+		#	return template_o.render(data_o = data_opl, offer = data_opl)
+		#offer[int(firmaID_s)]
+		print('create_p:')
+		print(additionalData_opl)
+		print('create_p2:')
+		print(data_opl)
+>>>>>>> origin/master
 		if additionalData_opl != None:
 			return template_o.render(data_o = data_opl, offer = additionalData_opl)
 		return template_o.render(data_o = data_opl)
@@ -43,8 +53,14 @@ class View_cl(object):
 	def createForm_p(self, template_spl, data_opl, id_spl, entity, additionalData_opl = None): 
 	#-------------------------------------------------------	
 		template_o = self.lookup_o.get_template(template_spl)
-
-		if additionalData_opl != None:	
+<<<<<<< HEAD
+		print("additionalData_opl" + str(additionalData_opl))
+=======
+		print("Data:")
+		print(data_opl)
+>>>>>>> origin/master
+		if additionalData_opl != None:
+			
 			return template_o.render(data_o = data_opl, offer = additionalData_opl, id_s=id_spl, listform_s = entity)	
 		return template_o.render(data_o = data_opl, id_s=id_spl, listform_s = entity)
 	

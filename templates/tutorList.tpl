@@ -1,29 +1,31 @@
-<!-- Template -->
-<!-- Navigationsbereich -->
-@var loop_i;@
-@var tmp = context.length@
-@var entity = "tutor"@
+## coding: utf-8
+<html>
+	<head> 
+		<title>Web-Teams</title> 
+		<meta charset="UTF-8" /> 
+		<style>
+			@import "/webteams.css"; 
+		</style>
+	</head>
+		<body link="#800080" bgcolor="#ffffff" text="#000080" vlink="#ff0000"><b><font size="6">
+			<p align="center">P</font><font size="4">raxis</font><font size="6">P</font><font size=4>hasen</font><font size="6">M</font><font size="4">anager
+			<hr>
+         		<a href="/list/student">Studenten</a> - <a href="/list/tutor">Lehrende</a> - <a href="/list/company">Firmenverzeichnis</a> - <a href="/list/offer">Angebote</a> - <a href="/evaluation">Auswertung</a>
+        	<hr>
+            <table id="idList">
+                <tr><th>Titel</th><th>Name</th><th>Vorname</th><th>Lehrgebiet</th><th>Aktion</th></tr>
 
-<table>
-    <tr><th>Titel</th><th>Name</th><th>Vorname</th><th>Lehrgebiet</th></tr>
-    @for loop_i = 0; loop_i < context.length; loop_i++@
-        @var element = context[loop_i]@
-        @if element['name_s'] != ''@
-        <tr>
-            <td>#element['titel_s']#</td>
-            <td>#element['name_s']#</td>
-            <td>#element['vorname_s']#</td>
-            <td>#element['lehrgebiet_s']#</td>
-        </tr>
-        @endif@
-    @endfor@
-</table>	
-<div>
-	<a href="/add/#entity#">Erfassen</a> <!-- Noch ändern! -->
-    @if context.length > 0@
-        <button class="clEdit">Auswahl bearbeiten</button> 
-        <button class="clDelete">Löschen</button> 
-   	@endif@
-    <a href="/index.html">Startseite</a>
-</div>
-<!-- EOF -->
+                ## man verwendet hier Zugriff auf das Dictionary "data_o"
+
+                %for element in data_o:
+                    <tr id="r${data_o.index(element)}"><td>${element['titel_s']}</td><td>${element['name_s']}</td><td>${element['vorname_s']}</td><td>${element['lehrgebiet_s']}</td><td><a href="/edit/tutor/${data_o.index(element)}">bearbeiten</a>&nbsp;<a class="clDelete" href="/delete/tutor/${data_o.index(element)}">löschen</a></td></tr>
+                % endfor
+			</table>
+		<div>
+			<a href="/add/tutor">erfassen</a> <a href="/index.html">Startseite</a>
+		</div>
+	</body>
+</html>
+
+
+
